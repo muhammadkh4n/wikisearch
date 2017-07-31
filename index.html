@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wikipedia Viewer</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ajax.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="head">
+      <h1 class="brand"><i class="fa fa-wikipedia-w"></i>ikiSearch</h1>
+      <div class="search-box">
+        <input type="text" id="search" onkeydown="searchVal(event)">
+        <a id="search-btn"><i class="fa fa-search"></i></a>
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" id="luck">
+          I'm feeling lucky!
+        </a>
+      </div>
+    </div>
+    <div class="results-list" id="results-list">
+      <!-- Results will render here -->
+    </div>
+  </body>
+</html>

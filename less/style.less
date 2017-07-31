@@ -1,0 +1,136 @@
+@main-color: rgb(34, 29, 40);
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: @main-color
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.head {
+  background-color: #eee;
+  padding: 30px 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 30px;
+
+  i.fa {
+    font-size: 1.6em;
+    position: relative;
+    right: -5px;
+    top: 5px;
+  }
+}
+
+.search-box {
+  text-align: center;
+
+  a {
+    @bg: rgb(44, 186, 135);
+    position: relative;
+    left: -6px;
+    font-size: 2em;
+    background-color: @bg;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 11px 15px;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &:hover {
+      background-color: darken(@bg, 10%);
+    }
+
+    &:active {
+      background-color: darken(@bg, 20%);
+    }
+  }
+
+  a#search-btn {
+    display: inline-block;
+    width: 100px;
+  }
+
+  a#luck {
+    @bg: rgb(47, 132, 150);
+    background-color: @bg;
+    border-radius: 5px;
+    left: 0;
+
+    &:hover {
+      background-color: darken(@bg, 10%);
+    }
+  }
+
+  input {
+    padding: 10px 10px;
+    font-size: 2em;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid rgb(166, 166, 166);
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.alert-error {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 300px;
+
+  i {
+    color: rgb(255, 0, 0);
+  }
+}
+
+ul {
+  width: 80%;
+  max-width: 1200px;
+  margin: 200px auto 30px;
+}
+
+li {
+  list-style: none;
+  padding: 10px 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid rgb(172, 172, 172);
+    border-bottom: 2px solid @main-color;
+    display: block;
+    padding: 20px 20px;
+    transition: box-shadow 0.2s;
+
+    .title {
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      box-shadow: 0 0 7px rgba(45, 45, 45, 0.8);
+      border-bottom-color: rgb(15, 111, 164);
+
+      .title {
+        color: rgb(15, 111, 164);
+      }
+    }
+  }
+
+  .description {
+    font-size: 0.9em;
+    padding-top: 5px;
+  }
+}
